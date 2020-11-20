@@ -1,0 +1,134 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+:root {
+  --primary: #3949ab;
+  --secondary: #1e88e5;
+  --accent: #f4511e;
+  --white: #ffffff;
+  --navbar-height: 45px;
+}
+
+.header {
+  height: var(--navbar-height);
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.header--primary {
+  background: var(--primary);
+}
+
+.header--secondary {
+  background: var(--secondary);
+}
+
+.header--accent {
+  background: var(--accent);
+}
+
+/*
+  MENU
+*/
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--navbar-height);
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  height: var(--navbar-height);
+}
+
+.menu__link {
+  display: flex;
+  align-items: center;
+  height: var(--navbar-height);
+  padding: 0 12px;
+  color: var(--white);
+  font-size: 14px;
+}
+
+.menu__link:hover,
+.menu__link:focus {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.menu__item--active .menu__link {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/*
+  #MENU
+*/
+
+/*
+  SEARCH
+*/
+.search {
+  display: flex;
+  border: 1px solid #dddddd;
+  height: 30px;
+  border-radius: 6px;
+}
+
+.search__input {
+  border: none;
+  height: 100%;
+  border-radius: 5px 0 0 5px;
+  padding: 0 10px;
+  font-size: 12px;
+}
+
+.search__button {
+  border: none;
+  border-radius: 0 5px 5px 0;
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.search__button:hover {
+  background: #dddddd;
+}
+
+.header--primary .search__button {
+  color: var(--primary);
+}
+
+.header--secondary .search__button {
+  color: var(--secondary);
+}
+
+.header--accent .search__button {
+  color: var(--accent);
+}
+
+/*
+  #SEARCH
+*/
